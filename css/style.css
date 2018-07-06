@@ -26,7 +26,9 @@ h1
     color: white;
     transform: translateY(-50%);
     background: rgba(0,0,0,0.5);
-    opacity:0;
+    opacity: 0;
+    font-size: 0;
+    transition: all 1s;
 }
 
 #kontener
@@ -54,46 +56,17 @@ h1
     right: -10px;
     bottom: -6px;
     background: white;
+    transition: all 1s;
 }
 
 #kontener:hover::after
 {
-    animation-name: fade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    top:50%;
+    bottom:50%;
 }
 
 #kontener:hover h1
 {
-    animation-name: text-fade;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
     opacity: 1;
+    font-size: 2em;
 }
-
-@keyframes fade
-{
-    0%
-    {
-        top: -10px;
-        bottom: -6px;
-    }
-    100%
-    {
-        top:50%;
-        bottom:50%;
-    }
-}
-
-@keyframes text-fade
-{
-    0%
-    {
-        font-size: 0;
-    }
-    100%
-    {
-        font-size: 2em;
-    }
-}
-
